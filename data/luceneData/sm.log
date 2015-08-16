@@ -1,0 +1,310 @@
+2015-08-09 17:15:33 INFO  [Restlet-1142506670] com.jd.scheduler.servicemanager.restlets.AddTaskResource.addTask(46) - Received: {"taskId":14,"taskName":"test20150809","userId":3,"taskArgs":"{\"className\":\"\",\"extra\":\"\",\"option\":\"123\"}","metaId":"13","programFileName":"test.sh","dependenceFileName":"","taskInstanceId":66,"isDebugTask":0,"action":"RunTask","subJobIds":null,"taskType":"hive","serviceId":2,"serviceType":"hadoop","schedulerNode":"127.0.0.1:18080","checkSum":"bac0e2e99da6893ba358facfd1f0d64c","paramPairs":{"mydef":"abc","date_ymdh":"2015080917"}}
+2015-08-09 17:15:33 INFO  [Restlet-1142506670] com.jd.scheduler.servicemanager.CoreManager.getTaskExecute(386) - start build task execution
+2015-08-09 17:15:33 INFO  [Restlet-1142506670] com.jd.scheduler.servicemanager.TaskFactory.getTaskExecutor(66) - checking executor: Jar
+2015-08-09 17:15:33 INFO  [Restlet-1142506670] com.jd.scheduler.servicemanager.TaskFactory.getTaskExecutor(66) - checking executor: MapR
+2015-08-09 17:15:33 INFO  [Restlet-1142506670] com.jd.scheduler.servicemanager.TaskFactory.getTaskExecutor(66) - checking executor: Sqoop
+2015-08-09 17:15:33 INFO  [Restlet-1142506670] com.jd.scheduler.servicemanager.TaskFactory.getTaskExecutor(66) - checking executor: Hive
+2015-08-09 17:15:33 INFO  [Restlet-1142506670] com.jd.scheduler.servicemanager.TaskExecutionBuilder.buildTaskExecution(71) - setted Hive executor
+2015-08-09 17:15:33 INFO  [Restlet-1142506670] com.jd.scheduler.servicemanager.reporters.RestReporter.reportTaskStatus(66) - report task: 66, status: 2, url: http://127.0.0.1:18080/scheduler-center/sm/report/handleSMReport,param map:{JobID=null, TaskID=14, TaskStatus=2, TaskInstanceID=66}
+2015-08-09 17:15:33 DEBUG [Restlet-1142506670] com.jd.scheduler.servicemanager.reporters.RestReporter.getSchedulerNodeCount(340) - schedulerAddrs=127.0.0.1:18080
+2015-08-09 17:15:33 INFO  [Restlet-1142506670] com.jd.scheduler.servicemanager.reporters.RestReporter.failRetryForReport(227) - Starting connect:127.0.0.1:18080
+2015-08-09 17:15:33 DEBUG [Restlet-1142506670] com.jd.scheduler.servicemanager.reporters.HttpClientManager.handlerRequest(87) - url is http://127.0.0.1:18080/scheduler-center/sm/report/handleSMReport,request parameter string is [{JobID=null, TaskID=14, TaskStatus=2, TaskInstanceID=66}]
+2015-08-09 17:15:33 DEBUG [Restlet-1142506670] org.apache.http.impl.conn.PoolingClientConnectionManager.requestConnection(186) - Connection request: [route: {}->http://127.0.0.1:18080][total kept alive: 2; route allocated: 2 of 10; total allocated: 2 of 20]
+2015-08-09 17:15:33 DEBUG [Restlet-1142506670] org.apache.http.impl.conn.PoolingClientConnectionManager.leaseConnection(220) - Connection leased: [id: 1][route: {}->http://127.0.0.1:18080][total kept alive: 1; route allocated: 2 of 10; total allocated: 2 of 20]
+2015-08-09 17:15:33 DEBUG [Restlet-1142506670] org.apache.http.impl.client.DefaultHttpClient.execute(465) - Stale connection check
+2015-08-09 17:15:33 DEBUG [Restlet-1142506670] org.apache.http.impl.client.DefaultHttpClient.execute(467) - Stale connection detected
+2015-08-09 17:15:33 DEBUG [Restlet-1142506670] org.apache.http.impl.conn.DefaultClientConnection.close(169) - Connection 0.0.0.0:58915<->127.0.0.1:18080 closed
+2015-08-09 17:15:33 DEBUG [Restlet-1142506670] org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(177) - Connecting to 127.0.0.1:18080
+2015-08-09 17:15:33 DEBUG [Restlet-1142506670] org.apache.http.client.protocol.RequestAddCookies.process(132) - CookieSpec selected: best-match
+2015-08-09 17:15:33 DEBUG [Restlet-1142506670] org.apache.http.client.protocol.RequestAuthCache.process(78) - Auth cache not set in the context
+2015-08-09 17:15:33 DEBUG [Restlet-1142506670] org.apache.http.client.protocol.RequestTargetAuthentication.process(78) - Target auth state: UNCHALLENGED
+2015-08-09 17:15:33 DEBUG [Restlet-1142506670] org.apache.http.client.protocol.RequestProxyAuthentication.process(87) - Proxy auth state: UNCHALLENGED
+2015-08-09 17:15:33 DEBUG [Restlet-1142506670] org.apache.http.impl.client.DefaultHttpClient.tryExecute(710) - Attempt 1 to execute request
+2015-08-09 17:15:33 DEBUG [Restlet-1142506670] org.apache.http.impl.conn.DefaultClientConnection.sendRequestHeader(269) - Sending request: POST /scheduler-center/sm/report/handleSMReport HTTP/1.1
+2015-08-09 17:15:33 DEBUG [Restlet-1142506670] org.apache.http.wire.wire(63) - >> "POST /scheduler-center/sm/report/handleSMReport HTTP/1.1[\r][\n]"
+2015-08-09 17:15:33 DEBUG [Restlet-1142506670] org.apache.http.wire.wire(63) - >> "Content-Length: 40[\r][\n]"
+2015-08-09 17:15:33 DEBUG [Restlet-1142506670] org.apache.http.wire.wire(63) - >> "Content-Type: application/x-www-form-urlencoded; charset=UTF-8[\r][\n]"
+2015-08-09 17:15:33 DEBUG [Restlet-1142506670] org.apache.http.wire.wire(63) - >> "Host: 127.0.0.1:18080[\r][\n]"
+2015-08-09 17:15:33 DEBUG [Restlet-1142506670] org.apache.http.wire.wire(63) - >> "Connection: Keep-Alive[\r][\n]"
+2015-08-09 17:15:33 DEBUG [Restlet-1142506670] org.apache.http.wire.wire(63) - >> "User-Agent: Apache-HttpClient/4.2.1 (java 1.5)[\r][\n]"
+2015-08-09 17:15:33 DEBUG [Restlet-1142506670] org.apache.http.wire.wire(63) - >> "[\r][\n]"
+2015-08-09 17:15:33 DEBUG [Restlet-1142506670] org.apache.http.headers.sendRequestHeader(273) - >> POST /scheduler-center/sm/report/handleSMReport HTTP/1.1
+2015-08-09 17:15:33 DEBUG [Restlet-1142506670] org.apache.http.headers.sendRequestHeader(276) - >> Content-Length: 40
+2015-08-09 17:15:33 DEBUG [Restlet-1142506670] org.apache.http.headers.sendRequestHeader(276) - >> Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+2015-08-09 17:15:33 DEBUG [Restlet-1142506670] org.apache.http.headers.sendRequestHeader(276) - >> Host: 127.0.0.1:18080
+2015-08-09 17:15:33 DEBUG [Restlet-1142506670] org.apache.http.headers.sendRequestHeader(276) - >> Connection: Keep-Alive
+2015-08-09 17:15:33 DEBUG [Restlet-1142506670] org.apache.http.headers.sendRequestHeader(276) - >> User-Agent: Apache-HttpClient/4.2.1 (java 1.5)
+2015-08-09 17:15:33 DEBUG [Restlet-1142506670] org.apache.http.wire.wire(77) - >> "TaskID=14&TaskStatus=2&TaskInstanceID=66"
+2015-08-09 17:15:34 DEBUG [Restlet-1142506670] org.apache.http.wire.wire(63) - << "HTTP/1.1 200 OK[\r][\n]"
+2015-08-09 17:15:34 DEBUG [Restlet-1142506670] org.apache.http.wire.wire(63) - << "Server: Apache-Coyote/1.1[\r][\n]"
+2015-08-09 17:15:34 DEBUG [Restlet-1142506670] org.apache.http.wire.wire(63) - << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2015-08-09 17:15:34 DEBUG [Restlet-1142506670] org.apache.http.wire.wire(63) - << "Transfer-Encoding: chunked[\r][\n]"
+2015-08-09 17:15:34 DEBUG [Restlet-1142506670] org.apache.http.wire.wire(63) - << "Date: Sun, 09 Aug 2015 09:15:34 GMT[\r][\n]"
+2015-08-09 17:15:34 DEBUG [Restlet-1142506670] org.apache.http.wire.wire(63) - << "[\r][\n]"
+2015-08-09 17:15:34 DEBUG [Restlet-1142506670] org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(254) - Receiving response: HTTP/1.1 200 OK
+2015-08-09 17:15:34 DEBUG [Restlet-1142506670] org.apache.http.headers.receiveResponseHeader(257) - << HTTP/1.1 200 OK
+2015-08-09 17:15:34 DEBUG [Restlet-1142506670] org.apache.http.headers.receiveResponseHeader(260) - << Server: Apache-Coyote/1.1
+2015-08-09 17:15:34 DEBUG [Restlet-1142506670] org.apache.http.headers.receiveResponseHeader(260) - << Content-Type: application/json;charset=UTF-8
+2015-08-09 17:15:34 DEBUG [Restlet-1142506670] org.apache.http.headers.receiveResponseHeader(260) - << Transfer-Encoding: chunked
+2015-08-09 17:15:34 DEBUG [Restlet-1142506670] org.apache.http.headers.receiveResponseHeader(260) - << Date: Sun, 09 Aug 2015 09:15:34 GMT
+2015-08-09 17:15:34 DEBUG [Restlet-1142506670] org.apache.http.impl.client.DefaultHttpClient.execute(540) - Connection can be kept alive indefinitely
+2015-08-09 17:15:34 DEBUG [Restlet-1142506670] org.apache.http.wire.wire(63) - << "22[\r][\n]"
+2015-08-09 17:15:34 DEBUG [Restlet-1142506670] org.apache.http.wire.wire(77) - << "{"code":20000,"content":"success"}"
+2015-08-09 17:15:34 DEBUG [Restlet-1142506670] org.apache.http.wire.wire(63) - << "[\r][\n]"
+2015-08-09 17:15:34 DEBUG [Restlet-1142506670] org.apache.http.wire.wire(63) - << "0[\r][\n]"
+2015-08-09 17:15:34 DEBUG [Restlet-1142506670] org.apache.http.wire.wire(63) - << "[\r][\n]"
+2015-08-09 17:15:34 DEBUG [Restlet-1142506670] org.apache.http.impl.conn.PoolingClientConnectionManager.releaseConnection(272) - Connection [id: 1][route: {}->http://127.0.0.1:18080] can be kept alive indefinitely
+2015-08-09 17:15:34 DEBUG [Restlet-1142506670] org.apache.http.impl.conn.PoolingClientConnectionManager.releaseConnection(278) - Connection released: [id: 1][route: {}->http://127.0.0.1:18080][total kept alive: 2; route allocated: 2 of 10; total allocated: 2 of 20]
+2015-08-09 17:15:34 INFO  [Restlet-1142506670] com.jd.scheduler.servicemanager.TaskMonitor.updateTask(64) - no task object to be updated
+2015-8-9 17:15:34 org.restlet.engine.log.LogFilter afterHandle
+信息: 2015-08-09	17:15:34	127.0.0.1	-	-	28112	POST	/JServiceManager/Tasks	-	200	-	0	106	http://127.0.0.1:28112	Java/1.6.0_45	-
+2015-08-09 17:15:34 INFO  [pool-1-thread-2] com.jd.scheduler.servicemanager.TaskProcessor.run(102) - 66
+2015-08-09 17:15:34 INFO  [pool-1-thread-2] com.jd.scheduler.servicemanager.TaskExecution.beforeProcess(610) - doing stuff before process
+2015-08-09 17:15:34 INFO  [pool-1-thread-2] com.jd.scheduler.servicemanager.executors.TaskExecutor.tryDownload(250) - create new lock for /usr/local/servicemanager/taskfiles/13/test.sh id 14115513010428
+2015-08-09 17:15:34 INFO  [pool-1-thread-2] com.jd.scheduler.servicemanager.executors.TaskExecutor.tryDownload(253) - lock .../usr/local/servicemanager/taskfiles/13/test.sh id 14115513010428
+2015-08-09 17:15:34 INFO  [pool-1-thread-2] com.jd.scheduler.servicemanager.executors.TaskExecutor.tryDownload(255) - lock .../usr/local/servicemanager/taskfiles/13/test.sh  done, id 14115513010428
+2015-08-09 17:15:34 INFO  [pool-1-thread-2] com.jd.scheduler.servicemanager.FileUtil.readFileMetaInfo(96) - Read checksum is bac0e2e99da6893ba358facfd1f0d64c for file /usr/local/servicemanager/taskfiles/13/test.sh.meta
+2015-08-09 17:15:34 INFO  [pool-1-thread-2] com.jd.scheduler.servicemanager.executors.TaskExecutor.tryDownload(293) - unlock done .../usr/local/servicemanager/taskfiles/13/test.sh id 14115513010428
+2015-08-09 17:15:34 INFO  [pool-1-thread-2] com.jd.scheduler.servicemanager.executors.TaskExecutor.tryDownload(298) - remove lock done .../usr/local/servicemanager/taskfiles/13/test.sh id 14115513010428
+2015-08-09 17:15:34 INFO  [pool-1-thread-2] com.jd.scheduler.servicemanager.TaskExecution.getProcessCmds(633) - getting args
+2015-08-09 17:15:34 INFO  [pool-1-thread-2] com.jd.scheduler.servicemanager.parsers.HiveParser.parseArgs(124) - ArgStr: {"className":"","extra":"","option":"123"}
+2015-08-09 17:15:34 INFO  [pool-1-thread-2] com.jd.scheduler.servicemanager.TaskExecution.processTask(464) - prepare execute
+2015-08-09 17:15:34 INFO  [pool-1-thread-2] com.jd.scheduler.servicemanager.TaskExecution.processTask(472) - build command at /usr/local/servicemanager/commands/ with sh Hive.sh NULL_# /usr/local/hive/bin /usr/local/servicemanager/taskfiles/13/test.sh NULL_# NULL_# 123 /usr/local/servicemanager/taskfiles/13/66 -SM_PAIRNUM=2 mydef=abc date_ymdh=2015080917 
+2015-08-09 17:15:34 INFO  [pool-1-thread-2] com.jd.scheduler.servicemanager.TaskExecution.processTask(483) - start execute
+2015-08-09 17:15:34 INFO  [pool-1-thread-2] com.jd.scheduler.servicemanager.TaskExecution.processTask(505) - err msg read thread started
+2015-08-09 17:15:34 INFO  [pool-1-thread-2] com.jd.scheduler.servicemanager.parsers.HiveParser.parseStatusAndDetails(51) - Host is NULL_#
+2015-08-09 17:15:34 INFO  [pool-1-thread-2] com.jd.scheduler.log.HBaseClient.pushLog(119) - push 66 log to task_logs
+2015-08-09 17:15:34 DEBUG [htable-pool1-t2] org.apache.hadoop.ipc.RpcClient.<init>(428) - Use SIMPLE authentication for service ClientService, sasl=false
+2015-08-09 17:15:34 DEBUG [htable-pool1-t2] org.apache.hadoop.ipc.RpcClient.setupIOstreams(862) - Connecting to taox/127.0.1.1:60020
+2015-08-09 17:15:34 DEBUG [htable-pool1-t2] org.apache.hadoop.ipc.RpcClient.writeRequest(1054) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: wrote request header call_id: 8 method_name: "Multi" request_param: true
+2015-08-09 17:15:34 DEBUG [IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox] org.apache.hadoop.ipc.RpcClient.run(722) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: starting, connections 1
+2015-08-09 17:15:34 DEBUG [IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox] org.apache.hadoop.ipc.RpcClient.readResponse(1082) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: got response header call_id: 8, totalSize: 12 bytes
+2015-08-09 17:15:34 INFO  [pool-1-thread-2] com.jd.scheduler.servicemanager.parsers.HiveParser.parseStatusAndDetails(51) - /usr/local/hive/bin/hive 123 -f /usr/local/servicemanager/taskfiles/13/cur_date_y-m
+2015-08-09 17:15:34 INFO  [pool-1-thread-2] com.jd.scheduler.log.HBaseClient.pushLog(119) - push 66 log to task_logs
+2015-08-09 17:15:34 DEBUG [htable-pool1-t2] org.apache.hadoop.ipc.RpcClient.writeRequest(1054) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: wrote request header call_id: 9 method_name: "Multi" request_param: true
+2015-08-09 17:15:34 DEBUG [IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox] org.apache.hadoop.ipc.RpcClient.readResponse(1082) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: got response header call_id: 9, totalSize: 12 bytes
+2015-08-09 17:15:34 INFO  [pool-1-thread-2] com.jd.scheduler.servicemanager.parsers.HiveParser.parseStatusAndDetails(51) - excute content--->show databases;
+2015-08-09 17:15:34 INFO  [pool-1-thread-2] com.jd.scheduler.log.HBaseClient.pushLog(119) - push 66 log to task_logs
+2015-08-09 17:15:34 DEBUG [htable-pool1-t2] org.apache.hadoop.ipc.RpcClient.writeRequest(1054) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: wrote request header call_id: 10 method_name: "Multi" request_param: true
+2015-08-09 17:15:34 DEBUG [IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox] org.apache.hadoop.ipc.RpcClient.readResponse(1082) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: got response header call_id: 10, totalSize: 12 bytes
+2015-08-09 17:15:36 INFO  [CheckCanExe 66] com.jd.scheduler.servicemanager.TaskExecution.run(792) - check canexe
+2015-08-09 17:15:38 INFO  [CheckCanExe 66] com.jd.scheduler.servicemanager.TaskExecution.run(792) - check canexe
+2015-08-09 17:15:38 DEBUG [pool-1-thread-1-SendThread(localhost:2181)] org.apache.zookeeper.ClientCnxn.readResponse(723) - Got ping response for sessionid: 0x14f117d95d7000d after 0ms
+2015-08-09 17:15:40 INFO  [CheckCanExe 66] com.jd.scheduler.servicemanager.TaskExecution.run(792) - check canexe
+2015-08-09 17:15:42 INFO  [CheckCanExe 66] com.jd.scheduler.servicemanager.TaskExecution.run(792) - check canexe
+2015-08-09 17:15:43 INFO  [pool-1-thread-2] com.jd.scheduler.servicemanager.parsers.HiveParser.parseStatusAndDetails(51) - 
+2015-08-09 17:15:43 INFO  [pool-1-thread-2] com.jd.scheduler.log.HBaseClient.pushLog(119) - push 66 log to task_logs
+2015-08-09 17:15:43 DEBUG [htable-pool1-t2] org.apache.hadoop.ipc.RpcClient.writeRequest(1054) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: wrote request header call_id: 11 method_name: "Multi" request_param: true
+2015-08-09 17:15:43 DEBUG [IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox] org.apache.hadoop.ipc.RpcClient.readResponse(1082) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: got response header call_id: 11, totalSize: 12 bytes
+2015-08-09 17:15:43 INFO  [pool-1-thread-2] com.jd.scheduler.servicemanager.parsers.HiveParser.parseStatusAndDetails(51) - Logging initialized using configuration in jar:file:/usr/local/soft/apache-hive-0.14.0-bin/lib/hive-common-0.14.0.jar!/hive-log4j.properties
+2015-08-09 17:15:43 INFO  [pool-1-thread-2] com.jd.scheduler.log.HBaseClient.pushLog(119) - push 66 log to task_logs
+2015-08-09 17:15:43 DEBUG [htable-pool1-t2] org.apache.hadoop.ipc.RpcClient.writeRequest(1054) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: wrote request header call_id: 12 method_name: "Multi" request_param: true
+2015-08-09 17:15:43 DEBUG [IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox] org.apache.hadoop.ipc.RpcClient.readResponse(1082) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: got response header call_id: 12, totalSize: 12 bytes
+2015-08-09 17:15:44 INFO  [pool-1-thread-2] com.jd.scheduler.servicemanager.parsers.HiveParser.parseStatusAndDetails(51) - SLF4J: Class path contains multiple SLF4J bindings.
+2015-08-09 17:15:44 INFO  [pool-1-thread-2] com.jd.scheduler.log.HBaseClient.pushLog(119) - push 66 log to task_logs
+2015-08-09 17:15:44 DEBUG [htable-pool1-t2] org.apache.hadoop.ipc.RpcClient.writeRequest(1054) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: wrote request header call_id: 13 method_name: "Multi" request_param: true
+2015-08-09 17:15:44 INFO  [CheckCanExe 66] com.jd.scheduler.servicemanager.TaskExecution.run(792) - check canexe
+2015-08-09 17:15:44 DEBUG [IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox] org.apache.hadoop.ipc.RpcClient.readResponse(1082) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: got response header call_id: 13, totalSize: 12 bytes
+2015-08-09 17:15:44 INFO  [pool-1-thread-2] com.jd.scheduler.servicemanager.parsers.HiveParser.parseStatusAndDetails(51) - SLF4J: Found binding in [jar:file:/usr/local/soft/hadoop-2.6.0/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+2015-08-09 17:15:44 INFO  [pool-1-thread-2] com.jd.scheduler.log.HBaseClient.pushLog(119) - push 66 log to task_logs
+2015-08-09 17:15:44 DEBUG [htable-pool1-t2] org.apache.hadoop.ipc.RpcClient.writeRequest(1054) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: wrote request header call_id: 14 method_name: "Multi" request_param: true
+2015-08-09 17:15:44 DEBUG [IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox] org.apache.hadoop.ipc.RpcClient.readResponse(1082) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: got response header call_id: 14, totalSize: 12 bytes
+2015-08-09 17:15:44 INFO  [pool-1-thread-2] com.jd.scheduler.servicemanager.parsers.HiveParser.parseStatusAndDetails(51) - SLF4J: Found binding in [jar:file:/usr/local/soft/apache-hive-0.14.0-bin/lib/hive-jdbc-0.14.0-standalone.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+2015-08-09 17:15:44 INFO  [pool-1-thread-2] com.jd.scheduler.log.HBaseClient.pushLog(119) - push 66 log to task_logs
+2015-08-09 17:15:44 DEBUG [htable-pool1-t2] org.apache.hadoop.ipc.RpcClient.writeRequest(1054) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: wrote request header call_id: 15 method_name: "Multi" request_param: true
+2015-08-09 17:15:44 DEBUG [IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox] org.apache.hadoop.ipc.RpcClient.readResponse(1082) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: got response header call_id: 15, totalSize: 12 bytes
+2015-08-09 17:15:44 INFO  [pool-1-thread-2] com.jd.scheduler.servicemanager.parsers.HiveParser.parseStatusAndDetails(51) - SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+2015-08-09 17:15:44 INFO  [pool-1-thread-2] com.jd.scheduler.log.HBaseClient.pushLog(119) - push 66 log to task_logs
+2015-08-09 17:15:44 DEBUG [htable-pool1-t2] org.apache.hadoop.ipc.RpcClient.writeRequest(1054) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: wrote request header call_id: 16 method_name: "Multi" request_param: true
+2015-08-09 17:15:44 DEBUG [IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox] org.apache.hadoop.ipc.RpcClient.readResponse(1082) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: got response header call_id: 16, totalSize: 12 bytes
+2015-08-09 17:15:44 INFO  [pool-1-thread-2] com.jd.scheduler.servicemanager.parsers.HiveParser.parseStatusAndDetails(51) - SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+2015-08-09 17:15:44 INFO  [pool-1-thread-2] com.jd.scheduler.log.HBaseClient.pushLog(119) - push 66 log to task_logs
+2015-08-09 17:15:44 DEBUG [htable-pool1-t2] org.apache.hadoop.ipc.RpcClient.writeRequest(1054) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: wrote request header call_id: 17 method_name: "Multi" request_param: true
+2015-08-09 17:15:44 DEBUG [IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox] org.apache.hadoop.ipc.RpcClient.readResponse(1082) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: got response header call_id: 17, totalSize: 12 bytes
+2015-08-09 17:15:46 INFO  [CheckCanExe 66] com.jd.scheduler.servicemanager.TaskExecution.run(792) - check canexe
+2015-08-09 17:15:46 DEBUG [Thread-0] com.jd.scheduler.servicemanager.SMStatusReportThread.run(52) - Heartbeating to 127.0.0.1:18080
+2015-08-09 17:15:46 DEBUG [Thread-0] com.jd.scheduler.servicemanager.reporters.HttpClientManager.handlerRequest(87) - url is http://127.0.0.1:18080/scheduler-center/sm/report/heartbeat,request parameter string is [{SMStatus=2, SMAddress=127.0.0.1:28112}]
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.impl.conn.PoolingClientConnectionManager.requestConnection(186) - Connection request: [route: {}->http://127.0.0.1:18080][total kept alive: 2; route allocated: 2 of 10; total allocated: 2 of 20]
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.impl.conn.PoolingClientConnectionManager.leaseConnection(220) - Connection leased: [id: 1][route: {}->http://127.0.0.1:18080][total kept alive: 1; route allocated: 2 of 10; total allocated: 2 of 20]
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.impl.client.DefaultHttpClient.execute(465) - Stale connection check
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.client.protocol.RequestAddCookies.process(132) - CookieSpec selected: best-match
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.client.protocol.RequestAuthCache.process(78) - Auth cache not set in the context
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.client.protocol.RequestTargetAuthentication.process(78) - Target auth state: UNCHALLENGED
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.client.protocol.RequestProxyAuthentication.process(87) - Proxy auth state: UNCHALLENGED
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.impl.client.DefaultHttpClient.tryExecute(710) - Attempt 1 to execute request
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.impl.conn.DefaultClientConnection.sendRequestHeader(269) - Sending request: POST /scheduler-center/sm/report/heartbeat HTTP/1.1
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.wire.wire(63) - >> "POST /scheduler-center/sm/report/heartbeat HTTP/1.1[\r][\n]"
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.wire.wire(63) - >> "Content-Length: 38[\r][\n]"
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.wire.wire(63) - >> "Content-Type: application/x-www-form-urlencoded; charset=UTF-8[\r][\n]"
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.wire.wire(63) - >> "Host: 127.0.0.1:18080[\r][\n]"
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.wire.wire(63) - >> "Connection: Keep-Alive[\r][\n]"
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.wire.wire(63) - >> "User-Agent: Apache-HttpClient/4.2.1 (java 1.5)[\r][\n]"
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.wire.wire(63) - >> "[\r][\n]"
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.headers.sendRequestHeader(273) - >> POST /scheduler-center/sm/report/heartbeat HTTP/1.1
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.headers.sendRequestHeader(276) - >> Content-Length: 38
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.headers.sendRequestHeader(276) - >> Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.headers.sendRequestHeader(276) - >> Host: 127.0.0.1:18080
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.headers.sendRequestHeader(276) - >> Connection: Keep-Alive
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.headers.sendRequestHeader(276) - >> User-Agent: Apache-HttpClient/4.2.1 (java 1.5)
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.wire.wire(77) - >> "SMStatus=2&SMAddress=127.0.0.1%3A28112"
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.wire.wire(63) - << "HTTP/1.1 200 OK[\r][\n]"
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.wire.wire(63) - << "Server: Apache-Coyote/1.1[\r][\n]"
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.wire.wire(63) - << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.wire.wire(63) - << "Transfer-Encoding: chunked[\r][\n]"
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.wire.wire(63) - << "Date: Sun, 09 Aug 2015 09:15:46 GMT[\r][\n]"
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.wire.wire(63) - << "[\r][\n]"
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(254) - Receiving response: HTTP/1.1 200 OK
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.headers.receiveResponseHeader(257) - << HTTP/1.1 200 OK
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.headers.receiveResponseHeader(260) - << Server: Apache-Coyote/1.1
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.headers.receiveResponseHeader(260) - << Content-Type: application/json;charset=UTF-8
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.headers.receiveResponseHeader(260) - << Transfer-Encoding: chunked
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.headers.receiveResponseHeader(260) - << Date: Sun, 09 Aug 2015 09:15:46 GMT
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.impl.client.DefaultHttpClient.execute(540) - Connection can be kept alive indefinitely
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.wire.wire(63) - << "1d[\r][\n]"
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.wire.wire(77) - << "{"code":20000,"content":null}"
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.wire.wire(63) - << "[\r][\n]"
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.wire.wire(63) - << "0[\r][\n]"
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.wire.wire(63) - << "[\r][\n]"
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.impl.conn.PoolingClientConnectionManager.releaseConnection(272) - Connection [id: 1][route: {}->http://127.0.0.1:18080] can be kept alive indefinitely
+2015-08-09 17:15:46 DEBUG [Thread-0] org.apache.http.impl.conn.PoolingClientConnectionManager.releaseConnection(278) - Connection released: [id: 1][route: {}->http://127.0.0.1:18080][total kept alive: 2; route allocated: 2 of 10; total allocated: 2 of 20]
+2015-08-09 17:15:47 DEBUG [Task-monitor] com.jd.scheduler.servicemanager.TaskMonitor.run(71) - Reporting
+2015-08-09 17:15:47 INFO  [Task-monitor] com.jd.scheduler.servicemanager.reporters.RestReporter.reportTaskStatus(66) - report task: 66, status: 3, url: http://127.0.0.1:18080/scheduler-center/sm/report/handleSMReport,param map:{JobID=null, TaskID=14, TaskStatus=3, TaskInstanceID=66}
+2015-08-09 17:15:47 DEBUG [Task-monitor] com.jd.scheduler.servicemanager.reporters.RestReporter.getSchedulerNodeCount(340) - schedulerAddrs=127.0.0.1:18080
+2015-08-09 17:15:47 INFO  [Task-monitor] com.jd.scheduler.servicemanager.reporters.RestReporter.failRetryForReport(227) - Starting connect:127.0.0.1:18080
+2015-08-09 17:15:47 DEBUG [Task-monitor] com.jd.scheduler.servicemanager.reporters.HttpClientManager.handlerRequest(87) - url is http://127.0.0.1:18080/scheduler-center/sm/report/handleSMReport,request parameter string is [{JobID=null, TaskID=14, TaskStatus=3, TaskInstanceID=66}]
+2015-08-09 17:15:47 DEBUG [Task-monitor] org.apache.http.impl.conn.PoolingClientConnectionManager.requestConnection(186) - Connection request: [route: {}->http://127.0.0.1:18080][total kept alive: 2; route allocated: 2 of 10; total allocated: 2 of 20]
+2015-08-09 17:15:47 DEBUG [Task-monitor] org.apache.http.impl.conn.PoolingClientConnectionManager.leaseConnection(220) - Connection leased: [id: 1][route: {}->http://127.0.0.1:18080][total kept alive: 1; route allocated: 2 of 10; total allocated: 2 of 20]
+2015-08-09 17:15:47 DEBUG [Task-monitor] org.apache.http.impl.client.DefaultHttpClient.execute(465) - Stale connection check
+2015-08-09 17:15:47 DEBUG [Task-monitor] org.apache.http.client.protocol.RequestAddCookies.process(132) - CookieSpec selected: best-match
+2015-08-09 17:15:47 DEBUG [Task-monitor] org.apache.http.client.protocol.RequestAuthCache.process(78) - Auth cache not set in the context
+2015-08-09 17:15:47 DEBUG [Task-monitor] org.apache.http.client.protocol.RequestTargetAuthentication.process(78) - Target auth state: UNCHALLENGED
+2015-08-09 17:15:47 DEBUG [Task-monitor] org.apache.http.client.protocol.RequestProxyAuthentication.process(87) - Proxy auth state: UNCHALLENGED
+2015-08-09 17:15:47 DEBUG [Task-monitor] org.apache.http.impl.client.DefaultHttpClient.tryExecute(710) - Attempt 1 to execute request
+2015-08-09 17:15:47 DEBUG [Task-monitor] org.apache.http.impl.conn.DefaultClientConnection.sendRequestHeader(269) - Sending request: POST /scheduler-center/sm/report/handleSMReport HTTP/1.1
+2015-08-09 17:15:47 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - >> "POST /scheduler-center/sm/report/handleSMReport HTTP/1.1[\r][\n]"
+2015-08-09 17:15:47 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - >> "Content-Length: 40[\r][\n]"
+2015-08-09 17:15:47 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - >> "Content-Type: application/x-www-form-urlencoded; charset=UTF-8[\r][\n]"
+2015-08-09 17:15:47 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - >> "Host: 127.0.0.1:18080[\r][\n]"
+2015-08-09 17:15:47 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - >> "Connection: Keep-Alive[\r][\n]"
+2015-08-09 17:15:47 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - >> "User-Agent: Apache-HttpClient/4.2.1 (java 1.5)[\r][\n]"
+2015-08-09 17:15:47 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - >> "[\r][\n]"
+2015-08-09 17:15:47 DEBUG [Task-monitor] org.apache.http.headers.sendRequestHeader(273) - >> POST /scheduler-center/sm/report/handleSMReport HTTP/1.1
+2015-08-09 17:15:47 DEBUG [Task-monitor] org.apache.http.headers.sendRequestHeader(276) - >> Content-Length: 40
+2015-08-09 17:15:47 DEBUG [Task-monitor] org.apache.http.headers.sendRequestHeader(276) - >> Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+2015-08-09 17:15:47 DEBUG [Task-monitor] org.apache.http.headers.sendRequestHeader(276) - >> Host: 127.0.0.1:18080
+2015-08-09 17:15:47 DEBUG [Task-monitor] org.apache.http.headers.sendRequestHeader(276) - >> Connection: Keep-Alive
+2015-08-09 17:15:47 DEBUG [Task-monitor] org.apache.http.headers.sendRequestHeader(276) - >> User-Agent: Apache-HttpClient/4.2.1 (java 1.5)
+2015-08-09 17:15:47 DEBUG [Task-monitor] org.apache.http.wire.wire(77) - >> "TaskID=14&TaskStatus=3&TaskInstanceID=66"
+2015-08-09 17:15:48 INFO  [CheckCanExe 66] com.jd.scheduler.servicemanager.TaskExecution.run(792) - check canexe
+2015-08-09 17:15:48 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - << "HTTP/1.1 200 OK[\r][\n]"
+2015-08-09 17:15:48 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - << "Server: Apache-Coyote/1.1[\r][\n]"
+2015-08-09 17:15:48 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2015-08-09 17:15:48 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - << "Transfer-Encoding: chunked[\r][\n]"
+2015-08-09 17:15:48 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - << "Date: Sun, 09 Aug 2015 09:15:48 GMT[\r][\n]"
+2015-08-09 17:15:48 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - << "[\r][\n]"
+2015-08-09 17:15:48 DEBUG [Task-monitor] org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(254) - Receiving response: HTTP/1.1 200 OK
+2015-08-09 17:15:48 DEBUG [Task-monitor] org.apache.http.headers.receiveResponseHeader(257) - << HTTP/1.1 200 OK
+2015-08-09 17:15:48 DEBUG [Task-monitor] org.apache.http.headers.receiveResponseHeader(260) - << Server: Apache-Coyote/1.1
+2015-08-09 17:15:48 DEBUG [Task-monitor] org.apache.http.headers.receiveResponseHeader(260) - << Content-Type: application/json;charset=UTF-8
+2015-08-09 17:15:48 DEBUG [Task-monitor] org.apache.http.headers.receiveResponseHeader(260) - << Transfer-Encoding: chunked
+2015-08-09 17:15:48 DEBUG [Task-monitor] org.apache.http.headers.receiveResponseHeader(260) - << Date: Sun, 09 Aug 2015 09:15:48 GMT
+2015-08-09 17:15:48 DEBUG [Task-monitor] org.apache.http.impl.client.DefaultHttpClient.execute(540) - Connection can be kept alive indefinitely
+2015-08-09 17:15:48 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - << "22[\r][\n]"
+2015-08-09 17:15:48 DEBUG [Task-monitor] org.apache.http.wire.wire(77) - << "{"code":20000,"content":"success"}"
+2015-08-09 17:15:48 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - << "[\r][\n]"
+2015-08-09 17:15:48 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - << "0[\r][\n]"
+2015-08-09 17:15:48 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - << "[\r][\n]"
+2015-08-09 17:15:48 DEBUG [Task-monitor] org.apache.http.impl.conn.PoolingClientConnectionManager.releaseConnection(272) - Connection [id: 1][route: {}->http://127.0.0.1:18080] can be kept alive indefinitely
+2015-08-09 17:15:48 DEBUG [Task-monitor] org.apache.http.impl.conn.PoolingClientConnectionManager.releaseConnection(278) - Connection released: [id: 1][route: {}->http://127.0.0.1:18080][total kept alive: 2; route allocated: 2 of 10; total allocated: 2 of 20]
+2015-08-09 17:15:50 INFO  [CheckCanExe 66] com.jd.scheduler.servicemanager.TaskExecution.run(792) - check canexe
+2015-08-09 17:15:52 INFO  [CheckCanExe 66] com.jd.scheduler.servicemanager.TaskExecution.run(792) - check canexe
+2015-08-09 17:15:54 INFO  [CheckCanExe 66] com.jd.scheduler.servicemanager.TaskExecution.run(792) - check canexe
+2015-08-09 17:15:54 DEBUG [IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox] org.apache.hadoop.ipc.RpcClient.close(1017) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: closed
+2015-08-09 17:15:54 DEBUG [IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox] org.apache.hadoop.ipc.RpcClient.run(737) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: stopped, connections 0
+2015-08-09 17:15:56 INFO  [CheckCanExe 66] com.jd.scheduler.servicemanager.TaskExecution.run(792) - check canexe
+2015-08-09 17:15:58 INFO  [CheckCanExe 66] com.jd.scheduler.servicemanager.TaskExecution.run(792) - check canexe
+2015-08-09 17:16:00 INFO  [CheckCanExe 66] com.jd.scheduler.servicemanager.TaskExecution.run(792) - check canexe
+2015-08-09 17:16:00 INFO  [pool-1-thread-2] com.jd.scheduler.servicemanager.parsers.HiveParser.parseStatusAndDetails(51) - OK
+2015-08-09 17:16:00 INFO  [pool-1-thread-2] com.jd.scheduler.log.HBaseClient.pushLog(119) - push 66 log to task_logs
+2015-08-09 17:16:00 DEBUG [htable-pool1-t2] org.apache.hadoop.ipc.RpcClient.<init>(428) - Use SIMPLE authentication for service ClientService, sasl=false
+2015-08-09 17:16:00 DEBUG [htable-pool1-t2] org.apache.hadoop.ipc.RpcClient.setupIOstreams(862) - Connecting to taox/127.0.1.1:60020
+2015-08-09 17:16:00 DEBUG [IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox] org.apache.hadoop.ipc.RpcClient.run(722) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: starting, connections 1
+2015-08-09 17:16:00 DEBUG [htable-pool1-t2] org.apache.hadoop.ipc.RpcClient.writeRequest(1054) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: wrote request header call_id: 18 method_name: "Multi" request_param: true
+2015-08-09 17:16:00 DEBUG [IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox] org.apache.hadoop.ipc.RpcClient.readResponse(1082) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: got response header call_id: 18, totalSize: 12 bytes
+2015-08-09 17:16:00 INFO  [pool-1-thread-2] com.jd.scheduler.servicemanager.parsers.HiveParser.parseStatusAndDetails(51) - default
+2015-08-09 17:16:00 INFO  [pool-1-thread-2] com.jd.scheduler.log.HBaseClient.pushLog(119) - push 66 log to task_logs
+2015-08-09 17:16:00 DEBUG [htable-pool1-t2] org.apache.hadoop.ipc.RpcClient.writeRequest(1054) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: wrote request header call_id: 19 method_name: "Multi" request_param: true
+2015-08-09 17:16:00 DEBUG [IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox] org.apache.hadoop.ipc.RpcClient.readResponse(1082) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: got response header call_id: 19, totalSize: 12 bytes
+2015-08-09 17:16:00 INFO  [pool-1-thread-2] com.jd.scheduler.servicemanager.parsers.HiveParser.parseStatusAndDetails(51) - Time taken: 0.978 seconds, Fetched: 1 row(s)
+2015-08-09 17:16:00 INFO  [pool-1-thread-2] com.jd.scheduler.log.HBaseClient.pushLog(119) - push 66 log to task_logs
+2015-08-09 17:16:00 DEBUG [htable-pool1-t2] org.apache.hadoop.ipc.RpcClient.writeRequest(1054) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: wrote request header call_id: 20 method_name: "Multi" request_param: true
+2015-08-09 17:16:00 DEBUG [IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox] org.apache.hadoop.ipc.RpcClient.readResponse(1082) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: got response header call_id: 20, totalSize: 12 bytes
+2015-08-09 17:16:01 INFO  [pool-1-thread-2] com.jd.scheduler.servicemanager.TaskExecution.processTask(537) - waiting for exit code
+2015-08-09 17:16:01 INFO  [pool-1-thread-2] com.jd.scheduler.servicemanager.TaskExecution.processTask(545) - check exit code
+2015-08-09 17:16:01 INFO  [pool-1-thread-2] com.jd.scheduler.servicemanager.TaskExecution.afterProcess(640) - doing stuff after process
+2015-08-09 17:16:01 INFO  [pool-1-thread-2] com.jd.scheduler.servicemanager.TaskExecution.endProcess(697) - cmd executor destroyed
+2015-08-09 17:16:01 INFO  [pool-1-thread-2] com.jd.scheduler.log.HBaseClient.pushLog(119) - push 66 log to task_logs
+2015-08-09 17:16:01 DEBUG [htable-pool1-t2] org.apache.hadoop.ipc.RpcClient.writeRequest(1054) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: wrote request header call_id: 21 method_name: "Multi" request_param: true
+2015-08-09 17:16:01 DEBUG [IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox] org.apache.hadoop.ipc.RpcClient.readResponse(1082) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: got response header call_id: 21, totalSize: 12 bytes
+2015-08-09 17:16:02 INFO  [CheckCanExe 66] com.jd.scheduler.servicemanager.TaskExecution.run(792) - check canexe
+2015-08-09 17:16:08 DEBUG [pool-1-thread-1-SendThread(localhost:2181)] org.apache.zookeeper.ClientCnxn.readResponse(723) - Got ping response for sessionid: 0x14f117d95d7000d after 0ms
+2015-08-09 17:16:11 DEBUG [IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox] org.apache.hadoop.ipc.RpcClient.close(1017) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: closed
+2015-08-09 17:16:11 DEBUG [IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox] org.apache.hadoop.ipc.RpcClient.run(737) - IPC Client (1160949816) connection to taox/127.0.1.1:60020 from taox: stopped, connections 0
+2015-08-09 17:16:18 DEBUG [Task-monitor] com.jd.scheduler.servicemanager.TaskMonitor.run(71) - Reporting
+2015-08-09 17:16:18 INFO  [Task-monitor] com.jd.scheduler.servicemanager.reporters.RestReporter.reportTaskStatus(66) - report task: 66, status: 6, url: http://127.0.0.1:18080/scheduler-center/sm/report/handleSMReport,param map:{JobID=null, TaskID=14, TaskStatus=6, TaskInstanceID=66}
+2015-08-09 17:16:18 DEBUG [Task-monitor] com.jd.scheduler.servicemanager.reporters.RestReporter.getSchedulerNodeCount(340) - schedulerAddrs=127.0.0.1:18080
+2015-08-09 17:16:18 INFO  [Task-monitor] com.jd.scheduler.servicemanager.reporters.RestReporter.failRetryForReport(227) - Starting connect:127.0.0.1:18080
+2015-08-09 17:16:18 DEBUG [Task-monitor] com.jd.scheduler.servicemanager.reporters.HttpClientManager.handlerRequest(87) - url is http://127.0.0.1:18080/scheduler-center/sm/report/handleSMReport,request parameter string is [{JobID=null, TaskID=14, TaskStatus=6, TaskInstanceID=66}]
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.impl.conn.PoolingClientConnectionManager.requestConnection(186) - Connection request: [route: {}->http://127.0.0.1:18080][total kept alive: 2; route allocated: 2 of 10; total allocated: 2 of 20]
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.impl.conn.PoolingClientConnectionManager.leaseConnection(220) - Connection leased: [id: 1][route: {}->http://127.0.0.1:18080][total kept alive: 1; route allocated: 2 of 10; total allocated: 2 of 20]
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.impl.client.DefaultHttpClient.execute(465) - Stale connection check
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.impl.client.DefaultHttpClient.execute(467) - Stale connection detected
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.impl.conn.DefaultClientConnection.close(169) - Connection 0.0.0.0:58943<->127.0.0.1:18080 closed
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(177) - Connecting to 127.0.0.1:18080
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.client.protocol.RequestAddCookies.process(132) - CookieSpec selected: best-match
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.client.protocol.RequestAuthCache.process(78) - Auth cache not set in the context
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.client.protocol.RequestTargetAuthentication.process(78) - Target auth state: UNCHALLENGED
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.client.protocol.RequestProxyAuthentication.process(87) - Proxy auth state: UNCHALLENGED
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.impl.client.DefaultHttpClient.tryExecute(710) - Attempt 1 to execute request
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.impl.conn.DefaultClientConnection.sendRequestHeader(269) - Sending request: POST /scheduler-center/sm/report/handleSMReport HTTP/1.1
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - >> "POST /scheduler-center/sm/report/handleSMReport HTTP/1.1[\r][\n]"
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - >> "Content-Length: 40[\r][\n]"
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - >> "Content-Type: application/x-www-form-urlencoded; charset=UTF-8[\r][\n]"
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - >> "Host: 127.0.0.1:18080[\r][\n]"
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - >> "Connection: Keep-Alive[\r][\n]"
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - >> "User-Agent: Apache-HttpClient/4.2.1 (java 1.5)[\r][\n]"
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - >> "[\r][\n]"
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.headers.sendRequestHeader(273) - >> POST /scheduler-center/sm/report/handleSMReport HTTP/1.1
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.headers.sendRequestHeader(276) - >> Content-Length: 40
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.headers.sendRequestHeader(276) - >> Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.headers.sendRequestHeader(276) - >> Host: 127.0.0.1:18080
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.headers.sendRequestHeader(276) - >> Connection: Keep-Alive
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.headers.sendRequestHeader(276) - >> User-Agent: Apache-HttpClient/4.2.1 (java 1.5)
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.wire.wire(77) - >> "TaskID=14&TaskStatus=6&TaskInstanceID=66"
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - << "HTTP/1.1 200 OK[\r][\n]"
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - << "Server: Apache-Coyote/1.1[\r][\n]"
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - << "Transfer-Encoding: chunked[\r][\n]"
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - << "Date: Sun, 09 Aug 2015 09:16:18 GMT[\r][\n]"
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - << "[\r][\n]"
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(254) - Receiving response: HTTP/1.1 200 OK
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.headers.receiveResponseHeader(257) - << HTTP/1.1 200 OK
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.headers.receiveResponseHeader(260) - << Server: Apache-Coyote/1.1
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.headers.receiveResponseHeader(260) - << Content-Type: application/json;charset=UTF-8
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.headers.receiveResponseHeader(260) - << Transfer-Encoding: chunked
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.headers.receiveResponseHeader(260) - << Date: Sun, 09 Aug 2015 09:16:18 GMT
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.impl.client.DefaultHttpClient.execute(540) - Connection can be kept alive indefinitely
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - << "22[\r][\n]"
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.wire.wire(77) - << "{"code":20000,"content":"success"}"
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - << "[\r][\n]"
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - << "0[\r][\n]"
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.wire.wire(63) - << "[\r][\n]"
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.impl.conn.PoolingClientConnectionManager.releaseConnection(272) - Connection [id: 1][route: {}->http://127.0.0.1:18080] can be kept alive indefinitely
+2015-08-09 17:16:18 DEBUG [Task-monitor] org.apache.http.impl.conn.PoolingClientConnectionManager.releaseConnection(278) - Connection released: [id: 1][route: {}->http://127.0.0.1:18080][total kept alive: 2; route allocated: 2 of 10; total allocated: 2 of 20]
+2015-08-09 17:16:18 INFO  [Task-monitor] com.jd.scheduler.servicemanager.TaskMonitor.run(136) - Instance [66]'s status is EXECUTED,Deleting from reportedTaskStatus
+2015-08-09 17:16:38 DEBUG [pool-1-thread-1-SendThread(localhost:2181)] org.apache.zookeeper.ClientCnxn.readResponse(723) - Got ping response for sessionid: 0x14f117d95d7000d after 0ms
+2015-08-09 17:16:48 DEBUG [Task-monitor] com.jd.scheduler.servicemanager.TaskMonitor.run(71) - Reporting
+2015-08-09 17:16:48 INFO  [Task-monitor] com.jd.scheduler.servicemanager.CoreManager.removeDoneTasks(406) - task 66 removed because reported is 1439111778850 and statusUpdated by 1439111761062
+2015-08-09 17:17:08 DEBUG [pool-1-thread-1-SendThread(localhost:2181)] org.apache.zookeeper.ClientCnxn.readResponse(723) - Got ping response for sessionid: 0x14f117d95d7000d after 0ms
+2015-08-09 17:17:18 DEBUG [Task-monitor] com.jd.scheduler.servicemanager.TaskMonitor.run(71) - Reporting
+
